@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="zdjecia\1.png" />
+    <None Remove="zdjecia\12.png" />
+    <None Remove="zdjecia\13.png" />
+    <None Remove="zdjecia\14.png" />
+    <None Remove="zdjecia\15.png" />
+    <None Remove="zdjecia\16.png" />
+    <None Remove="zdjecia\17.png" />
+    <None Remove="zdjecia\18.png" />
+    <None Remove="zdjecia\19.png" />
+    <None Remove="zdjecia\2.png" />
+    <None Remove="zdjecia\3.png" />
+    <None Remove="zdjecia\4.png" />
+    <None Remove="zdjecia\5.png" />
+    <None Remove="zdjecia\6.png" />
+    <None Remove="zdjecia\7.png" />
+    <None Remove="zdjecia\dolar.png" />
+    <None Remove="zdjecia\eu.png" />
+    <None Remove="zdjecia\koperta.png" />
+    <None Remove="zdjecia\kosz.png" />
+    <None Remove="zdjecia\money.png" />
+    <None Remove="zdjecia\piorun.png" />
+    <None Remove="zdjecia\plus.png" />
+    <None Remove="zdjecia\print.png" />
+    <None Remove="zdjecia\save.png" />
+    <None Remove="zdjecia\szukaj.png" />
+    <None Remove="zdjecia\vat.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="zdjecia\1.png" />
+    <Resource Include="zdjecia\12.png" />
+    <Resource Include="zdjecia\13.png" />
+    <Resource Include="zdjecia\14.png" />
+    <Resource Include="zdjecia\15.png" />
+    <Resource Include="zdjecia\16.png" />
+    <Resource Include="zdjecia\17.png" />
+    <Resource Include="zdjecia\18.png" />
+    <Resource Include="zdjecia\19.png" />
+    <Resource Include="zdjecia\2.png" />
+    <Resource Include="zdjecia\3.png" />
+    <Resource Include="zdjecia\4.png" />
+    <Resource Include="zdjecia\5.png" />
+    <Resource Include="zdjecia\6.png" />
+    <Resource Include="zdjecia\7.png" />
+    <Resource Include="zdjecia\dolar.png" />
+    <Resource Include="zdjecia\eu.png" />
+    <Resource Include="zdjecia\koperta.png" />
+    <Resource Include="zdjecia\kosz.png" />
+    <Resource Include="zdjecia\money.png" />
+    <Resource Include="zdjecia\piorun.png" />
+    <Resource Include="zdjecia\plus.png" />
+    <Resource Include="zdjecia\print.png" />
+    <Resource Include="zdjecia\save.png" />
+    <Resource Include="zdjecia\szukaj.png" />
+    <Resource Include="zdjecia\vat.png" />
+  </ItemGroup>
+
+</Project>

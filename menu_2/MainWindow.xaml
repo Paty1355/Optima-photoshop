@@ -1,0 +1,838 @@
+﻿<Window x:Class="menu_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:menu_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="615" Width="920">
+  
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="119"/>
+            <ColumnDefinition Width="31"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Margin="2,2,2,2">
+            <MenuItem Header="_Plik" ToolTip="Informacje plik">
+                <MenuItem Header="Nowy" InputGestureText="Ctrl+Shift+N"/>
+                <MenuItem Header="Otwórz" InputGestureText="Ctrl+O"/>
+                <Separator/>
+                <MenuItem Header="Automatyzuj">
+                    <MenuItem Header="Sekwencja wsadowa"/>
+                    <MenuItem Header="Prezentacja PDF"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Zapisz" InputGestureText="Ctrl+S">
+                    <MenuItem.Icon>
+                        <Image Source="\zdjecia\12.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Zapisz jako" InputGestureText="Shift+Ctrl+S"/>
+            </MenuItem>
+            <MenuItem Header="_Edycja">
+                <MenuItem Header="Cofnij" InputGestureText="Ctrl+Z">
+                    <MenuItem.Icon>
+                        <Image Source="\zdjecia\16.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Do przodu" InputGestureText="Shift+Ctrl+Z">
+                    <MenuItem.Icon>
+                        <Image Source="\zdjecia\15.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Do tyłu" InputGestureText="Alt+Ctrl+N">
+                    <MenuItem.Icon>
+                        <Image Source="\zdjecia\14.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Stonuj" InputGestureText="Alt+Ctrl+F"/>
+            </MenuItem>
+            <MenuItem Header="_Obraz">
+                <MenuItem Header="Tryb"/>
+                <Separator/>
+                <MenuItem Header="Dopasowania"/>
+                <Separator/>
+                <MenuItem Header="Auto-tony" InputGestureText="Shift+Ctrl+L"/>
+                <Separator/>
+                <MenuItem Header="Analiza">
+                    <MenuItem Header="Nagraj pomiary"/>
+                    <MenuItem Header="Nadzędzie miarka"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Tekst">
+                <MenuItem Header="Panele">
+                    <MenuItem Header="Panel znaki"/>
+                    <MenuItem Header="Panel akapit"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Wygładzanie"/>
+                <MenuItem Header="Orientacja"/>
+            </MenuItem>
+            <MenuItem Header="_Zaznacz">
+                <MenuItem Header="Wszystko"  InputGestureText="Ctrl+A" />
+                <MenuItem Header="Usun zaznaczenie"  InputGestureText="Ctrl+D">
+                    <MenuItem.Icon>
+                        <Image Source="\zdjecia\13.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Widok">
+                <MenuItem Header="Ustawienie proby">
+                    <MenuItem Header="Wlasne"/>
+                    <Separator/>
+                    <MenuItem Header="Roboczy CMYK"/>
+                    <MenuItem Header="Roboczy Niebieskozielony"/>
+                    <MenuItem Header="Roboczy Karmazynowy"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Powieksz"  InputGestureText="Ctrl++">
+                    <MenuItem.Icon>
+                        <Image Source="\zdjecia\18.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Pomniejsz"  InputGestureText="Ctrl--">
+                    <MenuItem.Icon>
+                        <Image Source="\zdjecia\19.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Okno">
+                <MenuItem Header="Ułóż"/>
+                <MenuItem Header="Przestrzeń robocza"/>
+                <Separator/>
+                <MenuItem Header="Rozszerzenia"/>
+                <Separator/>
+                <MenuItem Header="Akapit"/>
+                <MenuItem Header="Dopasowania"/>
+            </MenuItem>
+            <MenuItem Header="_Pomoc">
+                <MenuItem Header="Informacje o wtyczce">
+                    <MenuItem Header="Camera Raw"/>
+                    <MenuItem Header="Galeria filtrów..."/>
+                    <MenuItem Header="Odczytaj znak wodny"/>
+                </MenuItem>
+                <MenuItem Header="Informacje prawne"/>
+                <Separator/>
+                <MenuItem Header="Informacje o systemie"/>
+            </MenuItem>
+        </Menu>
+
+        <ToolBar Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="2,2,2,2" Background="#FFB8B8B8">
+
+            <ToggleButton Width="32" Height="32" Margin="2">
+                <Image Source="\zdjecia\1.png"/>
+            </ToggleButton>
+            <Separator/>
+            <ToggleButton Width="32" Height="32" Margin="2" ToolTip="Zaznacz">
+                <Image Source="\zdjecia\2.png"/>
+            </ToggleButton>
+            <Separator/>
+            <ToggleButton Width="32" Height="32" Margin="2">
+                <Image Source="\zdjecia\3.png"/>
+            </ToggleButton>
+            <Separator/>
+            <ToggleButton Width="32" Height="32" Margin="2">
+                <Image Source="\zdjecia\4.png"/>
+            </ToggleButton>
+            <Separator/>
+            <ToggleButton Width="32" Height="32" Margin="2">
+                <Image Source="\zdjecia\5.png"/>
+            </ToggleButton>
+            <Separator/>
+            <ToggleButton Width="32" Height="32" Margin="2">
+                <Image Source="\zdjecia\6.png"/>
+            </ToggleButton>
+            <Separator/>
+            <ToggleButton Width="32" Height="32" Margin="2">
+                <Image Source="\zdjecia\7.png"/>
+            </ToggleButton>
+        </ToolBar>
+        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <HeaderedContentControl Header="Operacje" Foreground="Black"/>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="2">
+            <!--<HeaderedContentControl Header="Przestrzeń robocza" FontSize="16"/>-->
+            <Border Grid.Row="2" Grid.Column="1">
+                <TabControl Grid.Row="2" Grid.Column="1">
+                    <TabItem>
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Ogólne" Foreground="Black"/>
+                            </StackPanel>
+                        </TabItem.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="107*"/>
+                                <ColumnDefinition Width="629*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!--grid wyzej-->
+                            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="105.35"/>
+                                    <ColumnDefinition Width="44.65"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                    <ColumnDefinition Width="140"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button Grid.Column="0" Style="{StaticResource ButtonStandardowy}" Content="Dokument" Grid.ColumnSpan="2" Margin="2,6,2,6" />
+
+                                <ComboBox Grid.Column="3" Style="{StaticResource ComboBoxmnniejszy}" Margin="3,8,3,8">
+                                    <ComboBoxItem IsSelected="True" Content="FA"/>
+                                    <ComboBoxItem Content="FY"/>
+                                </ComboBox>
+                                <Label Grid.Column="5" VerticalAlignment="Center" >Numer :</Label>
+                                <TextBox Grid.Column="6"  Style="{StaticResource Textboxmniejszy}" Grid.ColumnSpan="2" Margin="5,11,0,11">FA</TextBox>
+                                <ComboBox Grid.Column="9" Style="{StaticResource ComboBoxmnniejszy}" Margin="2,8,2,8" >
+                                    <ComboBoxItem IsSelected="True" Content="AUTO"/>
+                                </ComboBox>
+                                <TextBox Grid.Column="10"  Style="{StaticResource  Textboxmniejszy}" Grid.ColumnSpan="2" Margin="5,11,0,11">2010</TextBox>
+
+                            </Grid>
+
+                            <!--Początek sekcji nagłówek-->
+                            <Expander Grid.Row="1" Header="Nagłówek" Style="{StaticResource ExpanderRozwiniety}" Grid.ColumnSpan="2">
+                                <!--Definiujemy nowy Grid na Kontrahenta Kategorie i Magaazyn-->
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <!--Definiujemy kolumny do stworzenia odpowiednich pól oraz kolumny separacyjne-->
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="19*"/>
+                                        <ColumnDefinition Width="102*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="121*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="121*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!--Wiersz 0-->
+                                    <Button Grid.Column="0" Grid.Row="0" Content="Kontrahent" Style="{StaticResource ButtonStandardowy}" Grid.ColumnSpan="2" Margin="2,6,2,6"/>
+                                    <ComboBox Grid.Row="0" Grid.Column="3" Style="{StaticResource ComboBoxsredni}" >
+                                        <ComboBoxItem IsSelected="True" Content="Patrycja"/>
+                                        <ComboBoxItem Content="Kontrahent 2"/>
+                                        <ComboBoxItem Content="Kontrahent 3"/>
+                                    </ComboBox>
+                                    <TextBox Grid.Row="0" Grid.Column="5" Style="{StaticResource Textboxwiekszy}" Margin="1,2,1,2"></TextBox>
+
+                                    <!--Wiersz 1-->
+                                    <Button Grid.Row="1" Grid.Column="0" Content="Kategora" Style="{StaticResource ButtonStandardowy}" Grid.ColumnSpan="2" Margin="2,6,2,6"/>
+                                    <ComboBox Grid.Row="1" Grid.Column="3" Style="{StaticResource ComboBoxsredni}" >
+                                        <ComboBoxItem IsSelected="True" Content="Przychody"/>
+                                        <ComboBoxItem Content="Rozchody"/>
+                                        <ComboBoxItem Content="Inne"/>
+                                    </ComboBox>
+                                    <TextBox Grid.Row="1" Grid.Column="5" Style="{StaticResource Textboxwiekszy}" Margin="1,2,1,2"></TextBox>
+
+                                    <!--Wiersz 2-->
+                                    <Button Grid.Row="2" Grid.Column="0" Content="Magazyn" Style="{StaticResource ButtonStandardowy}" Grid.ColumnSpan="2" Margin="2,6,2,6"/>
+                                    <ComboBox Grid.Row="2" Grid.Column="3" Style="{StaticResource ComboBoxsredni}" >
+                                        <ComboBoxItem IsSelected="True" Content="Magazyn 1"/>
+                                        <ComboBoxItem Content="Magazyn 2"/>
+                                        <ComboBoxItem Content="Magazyn 3"/>
+                                    </ComboBox>
+                                    <TextBox Grid.Row="2" Grid.Column="5" Style="{StaticResource Textboxwiekszy}" Margin="1,2,1,2"></TextBox>
+                                </Grid>
+                            </Expander>
+
+                            <Expander Grid.Row="2" Grid.ColumnSpan="6"  Header="Daty i Wartości" Style="{StaticResource ExpanderRozwiniety}">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <!--Definiujemy kolumny do stworzenia odpowiednich pól oraz kolumny separacyjne-->
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="117*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="121*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="121*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <!--wiersz 0-->
+                                    <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Grid.ColumnSpan="2" >Data wystawienia:</Label>
+                                    <DatePicker Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Style="{StaticResource Date}" Margin="101,6,0,6"/>
+                                    <Label Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="5,0,0,0">Rabat:</Label>
+                                    <ComboBox Grid.Column="3" Grid.Row="0"  Style="{StaticResource ComboBoxmnniejszy }" HorizontalAlignment="Right">
+                                        <ComboBoxItem IsSelected="True" Content="5 %"/>
+                                        <ComboBoxItem Content="4 %"/>
+                                        <ComboBoxItem  Content="3 %"/>
+                                    </ComboBox>
+                                    <Label Grid.Column="5" Grid.Row="0" HorizontalAlignment="Left">Netto :</Label>
+                                    <TextBox Grid.Row="0" Grid.Column="5" HorizontalAlignment="Right" Style="{StaticResource Textboxmniejszy}"/>
+
+                                    <!--wiersz 1-->
+                                    <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" >Data sprzedaży:</Label>
+                                    <DatePicker Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Style="{StaticResource Date}" Margin="101,6,0,6"/>
+                                    <Label Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="5,0,0,0">Płatności:</Label>
+                                    <ComboBox Grid.Column="3" Grid.Row="1" HorizontalAlignment="Right" Style="{StaticResource ComboBoxmnniejszy }" >
+                                        <ComboBoxItem IsSelected="True" Content="Przelew"/>
+                                        <ComboBoxItem Content="Blik"/>
+                                    </ComboBox>
+                                    <Label Grid.Column="5" Grid.Row="1" HorizontalAlignment="Left">Razem:</Label>
+                                    <TextBox Grid.Row="1" Grid.Column="5"  HorizontalAlignment="Right" Style="{StaticResource Textboxmniejszy}"></TextBox>
+
+                                    <!--wiersz 2-->
+                                    <Label Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Grid.ColumnSpan="2" >Faktura liczona od:</Label>
+                                    <ComboBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Style="{StaticResource ComboBoxmnniejszy}" Margin="99,6,0,6">
+                                        <ComboBoxItem IsSelected="False" Content="Netto"/>
+                                        <ComboBoxItem Content="Brutto"/>
+                                    </ComboBox>
+
+
+                                    <Label Grid.Column="4" Grid.Row="2" HorizontalAlignment="Left"  Grid.ColumnSpan="2">Pozostało:</Label>
+                                    <TextBox Grid.Row="2" Grid.Column="5"  HorizontalAlignment="Right"  Style="{StaticResource Textboxmniejszy}" Margin="102,8,0,9"></TextBox>
+
+
+                                    <!--wiersz 3-->
+                                    <Label Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="5,0,0,0">Termin Płatności:</Label>
+                                    <DatePicker Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Style="{StaticResource Date}" Grid.ColumnSpan="2" Margin="110,0,0,1"/>
+
+                                    <Label Grid.Column="4" Grid.Row="3" HorizontalAlignment="Left"  Grid.ColumnSpan="2">Zapłacono:</Label>
+                                    <TextBox HorizontalAlignment="Right" Grid.Row="3" Grid.Column="5"  Style="{StaticResource Textboxmniejszy}"></TextBox>
+                                </Grid>
+                            </Expander>
+                            <DataGrid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Lp."/>
+                                    <DataGridTextColumn Header="Kod"/>
+                                    <DataGridTextColumn Header="Nazwa"/>
+                                    <DataGridTextColumn Header="Ilość"/>
+                                    <DataGridTextColumn Header="Jm"/>
+                                    <DataGridTextColumn Header="Rabat"/>
+                                    <DataGridTextColumn Header="Cena"/>
+                                    <DataGridTextColumn Header="Wartość"/>
+                                    <DataGridTextColumn Header="% Marży"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </TabItem>
+
+                    <TabItem Header="Kontrahent">
+                        <ScrollViewer>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="24*"/>
+                                    <ColumnDefinition Width="217*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Expander Grid.Row="0" Header="Kontrahent" Style="{StaticResource ExpanderRozwiniety}" IsExpanded="False"  Grid.ColumnSpan="3">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="17*"/>
+                                            <ColumnDefinition Width="124*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="140*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="140*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="140*"/>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="140*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        </Grid.ColumnDefinitions>
+
+
+                                        <ComboBox Grid.Row="0" Style="{StaticResource ComboBoxmnniejszy}" Grid.ColumnSpan="2" Margin="4,6,3,6">
+                                            <ComboBoxItem IsSelected="True" Content="Kontrahent"/>
+                                            <ComboBoxItem Content="Kontrahent 2"/>
+                                        </ComboBox>
+                                        <ComboBox Grid.Row="0" Grid.Column="3" Style="{StaticResource ComboBoxmnniejszy}" Margin="4,6,4,6">
+                                            <ComboBoxItem IsSelected="True" Content="AL_KOMP"/>
+                                            <ComboBoxItem Content="WHOLE_KOMP"/>
+                                        </ComboBox>
+                                        <Button Grid.Column="5" Style="{StaticResource Buttonmini }" HorizontalAlignment="Left"  >
+                                            <Image Source="\zdjecia\szukaj.png"/>
+                                        </Button>
+
+                                        <Label Grid.Row="1" Content="Nazwa:" Grid.ColumnSpan="2" Margin="0,0,0,20" Grid.RowSpan="2"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="8" Text="AL-KOMP sp.z.o.o" Style="{StaticResource Textboxdlugi}" Margin="1,3,1,3"/>
+                                        <TextBox  HorizontalAlignment="Left" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="8" Text="Hurtownia sprzętu i akcesoriów ogrodniczych" Style="{StaticResource Textboxdlugi}" Margin="1,0,1,42" Grid.RowSpan="2"/>
+                                        <Label Grid.Row="3" Grid.Column="0" Content="Kraj:" Grid.ColumnSpan="2"  Grid.RowSpan="2"/>
+                                        <TextBox Grid.Row="3" Grid.Column="3" Text="Polska" Style="{StaticResource Textboxsredni}" Grid.ColumnSpan="2" HorizontalAlignment="Left" />
+                                        <Label Grid.Row="3" Grid.Column="5" Content="Województwo:" VerticalAlignment="Center" />
+                                        <ComboBox Height="22" Grid.Row="3" Grid.Column="7" Style="{StaticResource ComboBoxStandardowy}" Grid.ColumnSpan="3" >
+                                            <ComboBoxItem IsSelected="True" Content="małopolskie"/>
+                                            <ComboBoxItem Content="wielkopolskie"/>
+                                        </ComboBox>
+                                        <Label Grid.Row="4" Grid.Column="0" Content="Ulica:" Grid.ColumnSpan="2"  Grid.RowSpan="2"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="4" Grid.Column="3" Text="Murarska" Style="{StaticResource Textboxsredni}" Grid.ColumnSpan="2" Margin="1,3,5,3"/>
+                                        <Label Grid.Row="4" Grid.Column="5" Content="Nr domu:"  Grid.RowSpan="2"/>
+                                        <TextBox Grid.Row="4" Grid.Column="6" Text="22" Style="{StaticResource Textboxsredni}" Grid.ColumnSpan="2"  />
+                                        <Label Grid.Row="4" Grid.Column="8" Content="/" Grid.ColumnSpan="2"  Grid.RowSpan="2" />
+                                        <TextBox Grid.Row="4" Grid.Column="9" Text="24" Style="{StaticResource Textboxsredni}"  />
+                                        <Label Grid.Row="5" Grid.Column="0" Content="Miasto:" Grid.ColumnSpan="2"  Grid.RowSpan="2"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="5" Grid.Column="3" Text="Kraków" Style="{StaticResource Textboxsredni}" Grid.ColumnSpan="2" Margin="1,3,5,3"/>
+                                        <Label Grid.Row="5" Grid.Column="5" Content="Kod Pocztowy:"  Grid.RowSpan="2"/>
+                                        <TextBox Grid.Row="5" Grid.Column="6" Text="33-100" Style="{StaticResource Textboxsredni}" Grid.ColumnSpan="2"  />
+                                        <Label Grid.Row="6" Content="Dodatkowe:" Grid.ColumnSpan="2"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="8"  Style="{StaticResource Textboxdlugi}" />
+                                    </Grid>
+                                </Expander>
+
+
+                                <Expander Grid.Row="1" Header="Odbiorca" Style="{StaticResource ExpanderRozwiniety}" Grid.ColumnSpan="3">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        </Grid.ColumnDefinitions>
+
+
+                                        <ComboBox Grid.Row="0" Style="{StaticResource ComboBoxmnniejszy}">
+                                            <ComboBoxItem IsSelected="True" Content="Kontrahent"/>
+                                            <ComboBoxItem Content="Kontrahent 2"/>
+                                        </ComboBox>
+                                        <ComboBox Grid.Row="0" Grid.Column="2" Style="{StaticResource ComboBoxmnniejszy}">
+                                            <ComboBoxItem IsSelected="True" Content="AL_KOMP_GLIWICE"/>
+                                            <ComboBoxItem Content="WHOLE_KOMP_GLIWICE"/>
+                                        </ComboBox>
+                                        <Button Grid.Column="4"  Style="{StaticResource Buttonmini }" HorizontalAlignment="Left" >
+                                            <Image Source="\zdjecia\szukaj.png"/>
+                                        </Button>
+
+                                        <Label Grid.Row="1" Content="Nazwa:"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="9" Text="AL-KOMP sp.z.o.o" Style="{StaticResource Textboxdlugi}"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="9" Text="Hurtownia sprzętu i akcesoriów ogrodniczych" Style="{StaticResource Textboxdlugi}"/>
+                                        <Label Grid.Row="3" Grid.Column="0" Content="Kraj:"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="3" Grid.Column="2" Text="Polska" Style="{StaticResource Textboxsredni}"/>
+                                        <Label Grid.Row="3" Grid.Column="4" Content="Województwo:"/>
+                                        <ComboBox Grid.Row="3" Grid.Column="6" Style="{StaticResource ComboBoxmnniejszy}">
+                                            <ComboBoxItem IsSelected="True" Content="małopolskie"/>
+                                            <ComboBoxItem Content="wielkopolskie"/>
+                                        </ComboBox>
+                                        <Label Grid.Row="4" Grid.Column="0" Content="Ulica:"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="4" Grid.Column="2" Text="Zimowa" Style="{StaticResource Textboxsredni}"/>
+                                        <Label Grid.Row="4" Grid.Column="4" Content="Nr domu:"/>
+                                        <TextBox Grid.Row="4" Grid.Column="6" Text="12" Style="{StaticResource Textboxsredni}" />
+                                        <Label Grid.Row="4" Grid.Column="7" Content="/" />
+                                        <TextBox Grid.Row="4" Grid.Column="8" Text="74" Style="{StaticResource Textboxsredni}" />
+                                        <Label Grid.Row="5" Grid.Column="0" Content="Miasto:"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="5" Grid.Column="2" Text="Gliwice" Style="{StaticResource Textboxsredni}"/>
+                                        <Label Grid.Row="5" Grid.Column="4" Content="Kod Pocztowy:"/>
+                                        <TextBox Grid.Row="5" Grid.Column="6" Text="33-100" Style="{StaticResource Textboxsredni}" />
+                                        <Label Grid.Row="6" Content="Dodatkowe:"/>
+                                        <TextBox HorizontalAlignment="Left" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="9"  Style="{StaticResource Textboxdlugi}"/>
+                                    </Grid>
+                                </Expander>
+                                <Border  Grid.Row="2" Grid.ColumnSpan="9" BorderThickness="1" BorderBrush="#FFAFCACA">
+                                    <Grid Grid.Row="2" Background="Azure" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}" Width="5"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                            <ColumnDefinition Width="*"/>
+                                            
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Content="Wprowadził :"/>
+                                        <TextBox Grid.Column="2" Text="ADMIN" Style="{StaticResource Textboxsredni}"/>
+                                        <DatePicker Grid.Column="4" />
+                                        <Label Content="Zmodyfikował :" Grid.Column="6"/>
+                                        <TextBox Grid.Column="8" Text="ADMIN" Style="{StaticResource Textboxsredni}"/>
+                                        <DatePicker Grid.Column="10" />
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </ScrollViewer>
+                    </TabItem>
+                    <TabItem Header="Płatność">
+                        <Grid Background="Azure">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="Azure">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Margin="10,0,0,0"  Content="Nazwa:" Style="{StaticResource labelpogrubiony}"/>
+                                <TextBox Text="karta" Grid.Row="0" Grid.Column="2" Style="{StaticResource Textboxsredni}"/>
+                                <Label Margin="10,0,0,0" Grid.Row="1" Content="Typ:" Style="{StaticResource labelpogrubiony}"/>
+                                <ComboBox Grid.Row="1" Grid.Column="2" Style="{StaticResource ComboBoxmnniejszy}">
+                                    <ComboBoxItem IsSelected="True" Content="Gotówka"/>
+                                    <ComboBoxItem Content="Karta"/>
+                                </ComboBox>
+                                <Label Margin="10,0,0,0" Grid.Row="2" Content="Rejestr:" Style="{StaticResource labelpogrubiony}"/>
+                                <ComboBox Grid.Row="2" Grid.Column="2" Style="{StaticResource ComboBoxmnniejszy}">
+                                    <ComboBoxItem IsSelected="True" Content="-domyslna-"/>
+                                    <ComboBoxItem Content="-wiekszy-"/>
+                                </ComboBox>
+                                <Label Margin="10,0,0,0" Content="Termin :" Grid.Row="3"/>
+                                <TextBox Text="0" Grid.Row="3" Grid.Column="2" Style="{StaticResource Textboxsredni}"/>
+                                <CheckBox Margin="10,0,0,0" Content="Terminal Płatniczy" Grid.Row="4" IsEnabled="False" VerticalAlignment="Center"/>
+                            </Grid>
+                            <Button Grid.Column="2" Style="{StaticResource Buttonkwadratsredni}" VerticalAlignment="Top" Margin="0,10,0,0" >
+                                <Image Source="\zdjecia\save.png"/>
+                            </Button>
+                                <Button Margin="0,30,0,0" Grid.Column="2" Style="{StaticResource Buttonkwadratsredni}" VerticalAlignment="Center">
+                                <Image Source="\zdjecia\13.png"/>
+                            </Button>
+
+                            <Expander Header="Płatnik" Grid.Row="1" Grid.ColumnSpan="2"  Style="{StaticResource ExpanderRozwiniety}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ComboBox Style="{StaticResource ComboBoxStandardowy}">
+                                        <ComboBoxItem IsSelected="True" Content="Kontrahent"/>
+                                        <ComboBoxItem Content="Kontrahent 2"/>
+                                    </ComboBox>
+                                    <ComboBox Grid.Column="2" Style="{StaticResource ComboBoxStandardowy}">
+                                        <ComboBoxItem IsSelected="True" Content=""/>
+                                    </ComboBox>
+                                </Grid>
+                            </Expander>
+                            <Expander Grid.ColumnSpan="2" Header="Rejestry walutowe" Style="{StaticResource ExpanderRozwiniety}" Grid.Row="2">
+                               
+                                    <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="5*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="2*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBox Margin="5,0,0,0" Height="25" Text="Rejestr" />
+                                    <TextBox Grid.Column="1" Text="Waluta" />
+                                    <TextBox Margin="5,0,0,0" Height="106" Grid.Row="1" Grid.ColumnSpan="2" />
+
+                                    <Button Grid.Column="3" Grid.RowSpan="3" Style="{StaticResource  Buttonkwadratsredni}" VerticalAlignment="Top">
+                                        <Image Source="\zdjecia\plus.png"/>
+                                    </Button>
+                                    <Button Grid.Column="3" Grid.RowSpan="3" Style="{StaticResource  Buttonkwadratsredni}" VerticalAlignment="Center">
+                                        <Image Source="\zdjecia\szukaj.png"/>
+                                    </Button>
+                                    <Button Grid.Column="3" Grid.RowSpan="3" Style="{StaticResource  Buttonkwadratsredni}" VerticalAlignment="Bottom">
+                                        <Image Source="\zdjecia\kosz.png"/>
+                                    </Button>
+                                </Grid>
+                            </Expander>
+                            <Grid Grid.Row="3" Grid.ColumnSpan="2" Background="Azure">
+                                <CheckBox Margin="5,0,0,0" Content="Forma płatności zablokowana" VerticalAlignment="Center"/>
+                            </Grid>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Dokumenty">
+                        <Grid Background="Azure">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Expander Header="Dokumenty powiązane" Grid.ColumnSpan="3" IsExpanded="True" >
+                                <DataGrid Height="90">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Typ"/>
+                                        <DataGridTextColumn Header="Numer dokumentu"/>
+                                        <DataGridTextColumn Header="Info"/>
+                                        <DataGridTextColumn Header="Data"/>
+                                        <DataGridTextColumn Header="Kwota"/>
+                                        <DataGridTextColumn Header="    "/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Expander>
+                            <Expander Grid.Row="1" Header="Biblioteka dokumentów" Grid.ColumnSpan="3" IsExpanded="True">
+                                <DataGrid Height="90">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Numer"/>
+                                        <DataGridTextColumn Header="Data"/>
+                                        <DataGridTextColumn Header="Kontrahent"/>
+                                        <DataGridTextColumn Header="Tytuł"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Expander>
+                            <Expander Grid.Row="2" Header="Zadania i kontakty CRM" Grid.ColumnSpan="3" IsExpanded="True">
+                                <DataGrid Height="160">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Numer"/>
+                                        <DataGridTextColumn Header="R"/>
+                                        <DataGridTextColumn Header="Data"/>
+                                        <DataGridTextColumn Header="Kontrahent"/>
+                                        <DataGridTextColumn Header="Temat"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Expander>
+                            <Border Padding="5" Grid.Row="3" Grid.ColumnSpan="4" BorderThickness="1" BorderBrush="#FFAFCACA">
+                                <Grid Grid.Row="3" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                        <ColumnDefinition Width="*"/>
+                        
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="Wprowadził :" VerticalAlignment="Center"/>
+                                    <TextBox Grid.Column="2" Text="Administrator" Style="{StaticResource Textboxsredni}"/>
+                                    <DatePicker Grid.Column="4" VerticalAlignment="Center" />
+                                    <Label Content="Zmodyfikował :" Grid.Column="6" VerticalAlignment="Center"/>
+                                    <TextBox Grid.Column="8" Text="Administrator" Style="{StaticResource Textboxsredni}"/>
+                                    <DatePicker Grid.Column="10"  VerticalAlignment="Center"/>
+                                </Grid>
+                            </Border>
+
+                            <Border BorderThickness="1" BorderBrush="#FFAFCACA"  Grid.Column="8" Grid.RowSpan="4">
+                                <Grid Grid.Column="8">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Style="{StaticResource rowSeperacyjnaStandardowa }"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Style="{StaticResource rowSeperacyjnaStandardowa }"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Style="{StaticResource rowSeperacyjnaStandardowa }"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Button Style="{StaticResource Buttonkwadratsredni}"  >
+                                        <Image Source="\zdjecia\save.png"/>
+                                    </Button>
+                                    <Button Grid.Row="2" Style="{StaticResource Buttonkwadratsredni}"  >
+                                        <Image Source="\zdjecia\13.png" />
+                                    </Button>
+                                    <Button  Grid.Row="4"  Style="{StaticResource Buttonkwadratsredni}" >
+                                        <Image Source="\zdjecia\koperta.png" />
+                                    </Button>
+                                    <Button  Grid.Row="6" Grid.ColumnSpan="2" Style="{StaticResource Buttonkwadratsredni}">
+                                        <Image Source="\zdjecia\vat.png" />
+                                    </Button>
+                                    <Button  Grid.Row="8"  Style="{StaticResource Buttonkwadratsredni}">
+                                        <Image Source="\zdjecia\eu.png" />
+                                    </Button>
+                                    <Button  Grid.Row="11" Style="{StaticResource Buttonkwadratsredni}">
+                                        <Image Source="\zdjecia\dolar.png" />
+                                    </Button>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Kaucje">
+                        <Grid Background="Azure">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Style="{StaticResource ColumnSeperacyjnaStandardowa}"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="3*"/>
+                            </Grid.RowDefinitions>
+ 
+                            <Expander Header="Płatności" Grid.Row="0" Grid.ColumnSpan="5" Style="{StaticResource ExpanderRozwiniety}">
+                                <DataGrid Height="150">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Termin"/>
+                                        <DataGridTextColumn Header="Forma pł"/>
+                                        <DataGridTextColumn Header="Waluta"/>
+                                        <DataGridTextColumn Header="Kwota"/>
+                                        <DataGridTextColumn Header="Rozliczono"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Expander>
+                            <Button Margin="10,22,0,0"  Grid.Column="6" Style="{StaticResource Buttonkwadratsredni}" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image Source="\zdjecia\plus.png" />
+                            </Button>
+                            <Button Margin="10,75,0,0"  Grid.Column="6" Style="{StaticResource Buttonkwadratsredni}" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image Source="\zdjecia\szukaj.png" />
+                            </Button>
+                            <Button Margin="10,130,0,0"  Grid.Column="6" Style="{StaticResource Buttonkwadratsredni}" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image Source="\zdjecia\kosz.png" />
+                            </Button>
+
+                            <DataGrid Grid.Row="3" Grid.ColumnSpan="8">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Lp"/>
+                                    <DataGridTextColumn Header="Kod"/>
+                                    <DataGridTextColumn Header="Nazwa"/>
+                                    <DataGridTextColumn Header="Ilość"/>
+                                    <DataGridTextColumn Header="Jm"/>
+                                    <DataGridTextColumn Header="Rabat"/>
+                                    <DataGridTextColumn Header="Cena"/>
+                                    <DataGridTextColumn Header="Wartość"/>
+                                    <DataGridTextColumn Header="Magazyn"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <Border BorderThickness="1" BorderBrush="#FFAFCACA"  Grid.Column="8" Grid.RowSpan="2">
+                                <Grid Grid.Column="8">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Style="{StaticResource rowSeperacyjnaStandardowa }"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Style="{StaticResource rowSeperacyjnaStandardowa }"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Style="{StaticResource rowSeperacyjnaStandardowa }"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Style="{StaticResource rowSeperacyjnaStandardowa }"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Button Grid.Row="0" Style="{StaticResource Buttonkwadratsredni}">
+                                    <Image Source="\zdjecia\save.png" />
+                                </Button>
+                                <Button   Grid.Row="2" Style="{StaticResource Buttonkwadratsredni}"  VerticalAlignment="Top">
+                                    <Image Source="\zdjecia\print.png" />
+                                </Button>
+                                <Button  Grid.Row="4" Style="{StaticResource Buttonkwadratsredni}"  VerticalAlignment="Top">
+                                    <Image Source="\zdjecia\13.png" />
+                                </Button>
+                                <Button  Grid.Row="6"  Style="{StaticResource Buttonkwadratsredni}"  VerticalAlignment="Top">
+                                    <Image Source="\zdjecia\plus.png" />
+                                </Button>
+                                <Button   Grid.Row="8" Style="{StaticResource Buttonkwadratsredni}"  VerticalAlignment="Top">
+                                    <Image Source="\zdjecia\szukaj.png" />
+                                </Button>
+                                <Button   Grid.Row="10" Style="{StaticResource Buttonkwadratsredni}"  VerticalAlignment="Top">
+                                    <Image Source="\zdjecia\kosz.png" />
+                                </Button>
+                                <Button  Grid.Row="12" Style="{StaticResource Buttonkwadratsredni}"  VerticalAlignment="Bottom">
+                                    <Image Source="\zdjecia\piorun.png" />
+                                </Button>
+                            </Grid>
+                            </Border>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </Border>
+        </Border>
+
+        <StatusBar Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3">
+            <StatusBarItem>
+                <TextBlock>Patrycja Prusak</TextBlock>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <TextBlock>Elektryk</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+
+    </Grid>
+    
+</Window>

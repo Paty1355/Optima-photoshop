@@ -1,0 +1,101 @@
+﻿<Application x:Class="menu_2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:menu_2"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+        <Style TargetType="ColumnDefinition" x:Key="ColumnSeperacyjnaStandardowa">
+            <Setter Property="Width" Value="5"/>
+        </Style>
+
+        <!--Separator Row-->
+        <Style TargetType="RowDefinition" x:Key="rowSeperacyjnaStandardowa">
+            <Setter Property="Height" Value="5"/>
+        </Style>
+
+        <!--Button-->
+        <Style x:Key="ButtonStandardowy" TargetType="Button">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="2,6"/>
+        </Style>
+        <!--label pogrubiony-->
+        <Style x:Key="labelpogrubiony" TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="navy"/>
+        </Style>
+        <!--Buttonmini-->
+        <Style x:Key="Buttonmini" TargetType="Button">
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="25"/>
+        </Style>
+       
+        <!--Buttonkwadratsredni-->
+        <Style x:Key="Buttonkwadratsredni" TargetType="Button">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Width" Value="38"/>
+            
+        </Style>
+
+        <!--ComboBox-->
+        <Style x:Key="ComboBoxStandardowy" TargetType="ComboBox">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="280"/>
+            <Setter Property="Margin" Value="2,6"/>
+        </Style>
+        <!--ComboBoxsredni-->
+        <Style x:Key="ComboBoxsredni" TargetType="ComboBox">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="2,6"/>
+        </Style>
+
+        <!--ComboBox mniejszy-->
+        <Style x:Key="ComboBoxmnniejszy" TargetType="ComboBox">
+            <Setter Property="Height" Value="23"/>
+            <Setter Property="Width" Value="130"/>
+        </Style>
+
+        <!--Expander-->
+        <Style x:Key="ExpanderRozwiniety" TargetType="Expander">
+            <Setter Property="Background" Value="Azure"/>
+            <Setter Property="IsExpanded" Value="True"/>
+        </Style>
+
+        <!--DatePicker-->
+        <Style x:Key="Date" TargetType="DatePicker">
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="130"/>
+        </Style>
+        <!--DatePickermniejszy-->
+        <Style x:Key="Datemn" TargetType="DatePicker">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="133"/>
+        </Style>
+
+        <!--Textboxsredni-->
+        <Style x:Key="Textboxsredni" TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="130"/>
+        </Style>
+
+        <!--Textboxmniejszy-->
+        <Style x:Key="Textboxmniejszy" TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="105"/>
+        </Style>
+
+        <!--Textboxwiekszy-->
+        <Style x:Key="Textboxwiekszy" TargetType="TextBox">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Width" Value="235"/>
+        </Style>
+
+        <!--Textboxdlugi-->
+        <Style x:Key="Textboxdlugi" TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="580"/>
+        </Style>
+
+    </Application.Resources>
+</Application>
